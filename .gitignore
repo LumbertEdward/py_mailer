@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+bin/
+include/
+lib/
+local/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.swp
+*.bak
+*.swo
+
+# Test related
+.pytest_cache/
+htmlcov/
+.coverage
+tests/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+

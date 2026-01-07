@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-mailer"
+version = "0.1.0"
+description = "Send emails via multiple providers using one clean Python interface."
+authors = [{ name = "Lumbert Omwaga" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "resend>=2.19.0"
+]
