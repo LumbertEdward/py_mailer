@@ -153,8 +153,8 @@ attachments = [
 ]
 ```
 
-# Note: py_mailer does not enforce how attachments are generated.
-# Encoding and file handling are left to the consuming application.
+Note: py_mailer does not enforce how attachments are generated.
+Encoding and file handling are left to the consuming application.
 
 ---
 
