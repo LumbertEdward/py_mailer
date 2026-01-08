@@ -36,6 +36,14 @@ pip install py_mailer
 from py_mailer.providers.resend import ResendEmailProvider
 
 mailer = ResendEmailProvider(api_key="re_123")
+
+from py_mailer.providers.brevo import BrevoEmailProvider
+
+mailer = BrevoEmailProvider(
+    api_key="BREVO_API_KEY",
+    sender_email="billing@yourapp.com",
+    sender_name="Your App",
+)
 ```
 
 ---
@@ -99,6 +107,8 @@ Attachments are passed as a list of dictionaries with the following structure:
 
 ---
 
+Resend
+
 ```bash
 attachments = [
     {
@@ -107,6 +117,18 @@ attachments = [
         "type": "application/pdf",
         "path": "/path/to/invoice.pdf",  # Optional
     }
+]
+```
+
+Brevo
+
+```bash
+attachments = [
+        {
+            "name": "invoice.pdf",
+            "content": base64_string,  # base64 encoded
+            "type": "application/pdf",
+        }
 ]
 
 Note: py_mailer does not enforce how attachments are generated.
@@ -120,3 +142,4 @@ Encoding and file handling are left to the consuming application.
 ---
 
 ✅ Resend
+✅ Brevo
