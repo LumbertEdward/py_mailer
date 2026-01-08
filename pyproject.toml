@@ -21,7 +21,9 @@ keywords = [
     "resend",
     "sendgrid",
     "mailgun",
-    "py_mailer"
+    "py_mailer",
+    "sendgrid",
+    "brevo"
 ]
 
 classifiers = [
@@ -38,7 +40,8 @@ classifiers = [
 ]
 
 dependencies = [
-    "resend>=2.19.0"
+    "resend>=2.19.0",
+    "sendgrid>=6.12.5"
 ]
 
 [project.urls]

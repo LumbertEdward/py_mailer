@@ -33,6 +33,7 @@ class BrevoEmailProvider(EmailProvider):
 
     def send(
         self,
+        source: str,
         to: str,
         subject: str,
         html_body: str,
@@ -77,7 +78,7 @@ class BrevoEmailProvider(EmailProvider):
         except requests.RequestException as exc:
             raise SendError("Failed to send email via Brevo API") from exc
 
-    def send_batch_emails(self, messages: List[Dict]) -> List[Dict]:
+    def send_batch_emails(self, source: str, messages: List[Dict]) -> List[Dict]:
         responses = []
         for msg in messages:
             try:

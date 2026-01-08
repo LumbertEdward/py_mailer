@@ -1,6 +1,6 @@
 # py_mailer 📬
 
-**py_mailer** is a provider-agnostic Python email integration layer that enables developers to send emails through multiple providers—such as **Resend** and **SendGrid**—using a single, consistent API.
+**py_mailer** is a provider-agnostic Python email integration layer that enables developers to send emails through multiple providers—such as **Resend**, **Brevo** and **SendGrid**—using a single, consistent API.
 
 It abstracts away provider-specific SDKs, making it easy to switch email services without rewriting application logic.
 
@@ -42,6 +42,14 @@ from py_mailer.providers.brevo import BrevoEmailProvider
 mailer = BrevoEmailProvider(
     api_key="BREVO_API_KEY",
     sender_email="billing@yourapp.com",
+    sender_name="Your App",
+)
+
+from py_mailer.providers.sendgrid import SendGridEmailProvider
+
+mailer = SendGridEmailProvider(
+    api_key="SENDGRID_API_KEY",
+    sender_email="no-reply@yourapp.com",
     sender_name="Your App",
 )
 ```
@@ -130,10 +138,23 @@ attachments = [
             "type": "application/pdf",
         }
 ]
-
-Note: py_mailer does not enforce how attachments are generated.
-Encoding and file handling are left to the consuming application.
 ```
+
+Sendgrid
+
+```bash
+attachments = [
+    {
+        "filename": "invoice.pdf",
+        "content": base64_string,
+        "type": "application/pdf",
+        "disposition": "attachment"
+    }
+]
+```
+
+# Note: py_mailer does not enforce how attachments are generated.
+# Encoding and file handling are left to the consuming application.
 
 ---
 
@@ -141,5 +162,6 @@ Encoding and file handling are left to the consuming application.
 
 ---
 
-✅ Resend
-✅ Brevo
+- ✅ Resend
+- ✅ Brevo
+- ✅ Sendgrid
