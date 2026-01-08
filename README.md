@@ -1,6 +1,6 @@
-# py-mailer 📬
+# py_mailer 📬
 
-**py-mailer** is a provider-agnostic Python email integration layer that enables developers to send emails through multiple providers—such as **Resend** and **SendGrid**—using a single, consistent API.
+**py_mailer** is a provider-agnostic Python email integration layer that enables developers to send emails through multiple providers—such as **Resend** and **SendGrid**—using a single, consistent API.
 
 It abstracts away provider-specific SDKs, making it easy to switch email services without rewriting application logic.
 
@@ -21,7 +21,7 @@ It abstracts away provider-specific SDKs, making it easy to switch email service
 ## Installation
 
 ```bash
-pip install py-mailer
+pip install py_mailer
 ```
 
 ---
@@ -109,7 +109,7 @@ attachments = [
     }
 ]
 
-Note: py-mailer does not enforce how attachments are generated.
+Note: py_mailer does not enforce how attachments are generated.
 Encoding and file handling are left to the consuming application.
 ```
 
