@@ -1,14 +1,47 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "py_mailer"
 version = "0.1.0"
-description = "Send emails via multiple providers using one clean Python interface."
-authors = [{ name = "Lumbert Omwaga" }]
+description = "Send emails via multiple providers using a clean, provider-agnostic Python interface"
 readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Lumbert Omwaga" }
+]
+
+keywords = [
+    "email",
+    "notifications",
+    "messaging",
+    "resend",
+    "sendgrid",
+    "mailgun",
+    "py_mailer"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+
 dependencies = [
     "resend>=2.19.0"
 ]
+
+[project.urls]
+Homepage = "https://github.com/LumbertEdward/py_mailer"
+Repository = "https://github.com/LumbertEdward/py_mailer"
+Issues = "https://github.com/LumbertEdward/py_mailer/issues"
