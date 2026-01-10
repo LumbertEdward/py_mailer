@@ -28,15 +28,19 @@ pip install py_mailer
 
 ## Usage
 
-## Initialize a provider
+Initialize a provider
 
----
+Resend
 
 ```bash
 from py_mailer.providers.resend import ResendEmailProvider
 
 mailer = ResendEmailProvider(api_key="re_123")
+```
 
+Brevo
+
+```bash
 from py_mailer.providers.brevo import BrevoEmailProvider
 
 mailer = BrevoEmailProvider(
@@ -44,7 +48,11 @@ mailer = BrevoEmailProvider(
     sender_email="billing@yourapp.com",
     sender_name="Your App",
 )
+```
 
+SendGrid
+
+```bash
 from py_mailer.providers.sendgrid import SendGridEmailProvider
 
 mailer = SendGridEmailProvider(
@@ -57,8 +65,6 @@ mailer = SendGridEmailProvider(
 ---
 
 ## Sending a single email
-
----
 
 ```bash
 mailer.send_email(
@@ -84,7 +90,6 @@ mailer.send_email(
 Batch emails allow sending messages to multiple recipients in a single request.
 Each message may optionally include its own attachments.
 
----
 
 ```bash
 mailer.send_batch_emails(
@@ -112,8 +117,6 @@ mailer.send_batch_emails(
 ## Attachments
 
 Attachments are passed as a list of dictionaries with the following structure:
-
----
 
 Resend
 
@@ -159,8 +162,6 @@ Encoding and file handling are left to the consuming application.
 ---
 
 ## Supported Providers
-
----
 
 - ✅ Resend
 - ✅ Brevo
